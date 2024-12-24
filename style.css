@@ -1,0 +1,123 @@
+/* Main Styles Here */
+
+/* Define color variables */
+:root {
+  --primary-color: #0b0b0b;
+  --secondary-color: #f2f2f2;
+  --tertiary-color: #008afc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.bg-tertiary-color {
+  background-color: rgba(242, 242, 242, 0.8);
+  color: #0b0b0b;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.bg-tertiary-color:hover {
+  border: 1px solid var(--tertiary-color);
+  box-shadow: inset 0 0 10px rgba(0, 140, 255, 0.5);
+}
+
+.move-bg {
+  animation: move-bg 10s linear infinite;
+}
+
+.service-box {
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(242, 242, 242, 0.9);
+  color: #0b0b0b;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  cursor: pointer;
+}
+
+.service-box.middle {
+  background-color: rgba(2, 121, 218, 0.9);
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.gotham-bold {
+  font-family: "Gotham-Bold", sans-serif;
+}
+
+.gotham-medium {
+  font-family: "Gotham-Medium", sans-serif;
+}
+
+.gotham-light {
+  font-family: "Gotham-Light", sans-serif;
+}
+
+.gotham-thin {
+  font-family: "Gotham-Thin", sans-serif;
+}
+
+/* Add the custom font families here which are stored in ./assets/fonts folder */
+/* Fonts: Gothan-Bold, Gothan-Medium, Gotham-Thin, Gothan-Light */
+
+@font-face {
+  font-family: "Gotham-Thin";
+  src: url("./assets/fonts/Gotham-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gotham-Light";
+  src: url("./assets/fonts/Gotham-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gotham-Medium";
+  src: url("./assets/fonts/Gotham-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("./assets/fonts/Gotham-Bold.otf") format("opentype");
+}
+
+@keyframes move-bg {
+  /* make the element move in circle infinite */
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5%);
+  }
+  50% {
+    transform: translate(0%, 5%);
+  }
+  75% {
+    transform: translate(5%, 5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
